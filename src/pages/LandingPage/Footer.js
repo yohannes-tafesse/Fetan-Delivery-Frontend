@@ -95,7 +95,7 @@ const Footer = () => {
             >
               {t.copyright}
             </div>
-            <ul className="d-flex gap-3 mt-3 list-unstyled">
+            <ul className="d-flex flex-wrap gap-3 mt-3 list-unstyled">
               {icons.map((Icon, i) => (
                 <li
                   key={i}

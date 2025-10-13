@@ -62,10 +62,8 @@ const Chart = () => {
           <div className="card shadow-sm h-100">
             <div className="card-body">
               <div className="d-flex justify-content-between align-items-center mb-3">
-                <h5 className="card-title text-light mb-0">
-                  {t.orders || "Orders"}
-                </h5>
-                <div className="d-flex justify-content-between align-items-center mb-3">
+                <h5 className="card-title text-light mb-0">{t.completed}</h5>
+                <div className="d-sm-flex justify-content-between align-items-center mb-3">
                   <select
                     className="form-select form-select-sm me-2"
                     style={{ width: "100px" }}

@@ -84,11 +84,9 @@ const PerformanceWaveChart = () => {
     >
       <div className="card-body">
         <div className="d-flex justify-content-between align-items-center mb-3">
-          <h5 className="card-title mb-3 text-dark">
-            {t.transaction || "Transactions"}
-          </h5>
+          <h5 className="card-title mb-3 text-light">{t.review}</h5>
 
-          <div className="d-flex justify-content-between align-items-center mb-3">
+          <div className="d-sm-flex justify-content-between align-items-center mb-3">
             <select
               className="form-select form-select-sm me-2"
               style={{ width: "100px" }}

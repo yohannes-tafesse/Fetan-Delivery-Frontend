@@ -33,7 +33,7 @@ const Header = () => {
       ></div>
 
       <nav
-        className={`navbar main-navbar nav-header header navbar-expand-lg mx-auto fixed-top ${
+        className={` nav-header  mx-auto fixed-top ${
           isScrolled ? "py-1  bg-info" : "py-1 bg-light"
         }`}
         style={{
@@ -77,10 +77,15 @@ const Header = () => {
             </li>
           </ul>
 
-          <button className="btn d-sm-none border-0" onClick={toggleNavbar}>
+          <button
+            className={`btn d-sm-none border-0 ${
+              isScrolled ? "bg-light" : "bg-info"
+            }`}
+            onClick={toggleNavbar}
+          >
             <i
               className={`bi ${isOpen ? "bi-x" : "bi-list"} fs-1${
-                isScrolled ? "bg-light" : "bg-info"
+                isScrolled ? "bg-light text-info" : "bg-info text-light"
               }`}
               style={{
                 transition: "color 0.3s ease-in-out",
@@ -90,7 +95,9 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`w-100 pt-5 d-sm-none bg-light`}
+            className={`w-100 pt-5 d-sm-none border border-success ${
+              isScrolled ? "bg-info " : "bg-light "
+            }`}
             style={{
               padding: isOpen ? "10px 20px" : "0 20px",
               position: "absolute",
@@ -108,7 +115,9 @@ const Header = () => {
               <li className="mb-2">
                 <NavLink
                   to="/"
-                  className="nav-link text-decoration-none text-light"
+                  className={`nav-link text-decoration-none   ${
+                    isScrolled ? "text-light " : "text-info "
+                  }`}
                   onClick={closeNavbar}
                 >
                   {t.Home}

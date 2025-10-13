@@ -43,7 +43,7 @@ const NewPagination = ({ page, totalPages, setPage }) => {
   };
 
   return (
-    <div className="d-flex justify-content-end align-items-center gap-2">
+    <div className="d-flex flex-wrap justify-content-end align-items-center gap-2">
       {/* Prev Button */}
       <button
         className="btn btn-outline-primary text-info bg-danger"
