@@ -1,0 +1,20 @@
+// custom.scss
+$white: white;
+$transparent-white: #ccc;
+
+$dark-blue-gray: #2c3a46;
+$blue-gray: #3f5263;
+$teal-blue: #309aaa;
+$green: #00914a;
+$lightgreen: black;
+
+$danger: $dark-blue-gray;
+$info: $white;
+$success: $transparent-white;
+$light: $blue-gray;
+$secondary: $teal-blue;
+$warning: $green;
+$primary: $lightgreen;
+
+// Import Bootstrap after overriding
+@import "node_modules/bootstrap/scss/bootstrap";
