@@ -44,16 +44,16 @@ const Dashboard = () => {
 
   const cardData = [
     {
-      value: stats?.owners || 0,
+      value: stats?.completed || 0,
       title: t.completed,
       icon: "bi bi-check-circle-fill",
     },
-    { value: stats?.websites || 0, title: t.shipping, icon: "bi bi-globe2" },
-    { value: stats?.orders || 0, title: t.failed, icon: "bi bi-cart-fill" },
+    { value: stats?.shipping || 0, title: t.shipping, icon: "bi bi-truck" },
+    { value: stats?.failed || 0, title: t.failed, icon: "bi bi-x-circle-fill" },
     {
-      value: stats?.transactions || 0,
+      value: stats?.return || 0,
       title: t.return,
-      icon: "bi bi-currency-dollar",
+      icon: "bi bi-arrow-return-left",
     },
   ];
 
@@ -98,21 +98,23 @@ const Dashboard = () => {
             <div className="row g-4">
               {cardData.map((card, index) => (
                 <div key={index} className="col-md-6 col-lg-3">
-                  <div className="card shadow-sm bg-danger text-info">
+                  <div
+                    className="card shadow-sm bg-success text-info"
+                    style={{ height: "100px" }}
+                  >
                     <div className="card-body d-flex align-items-center">
                       <div
-                        className="rounded-circle d-flex justify-content-center align-items-center me-3"
+                        className="rounded-circle d-flex bg-danger justify-content-center align-items-center me-3"
                         style={{
                           width: "50px",
                           height: "50px",
-                          background: "rgba(255, 255, 255, 0.69)",
                         }}
                       >
-                        <i className={`${card.icon} text-light fs-4`}></i>
+                        <i className={`${card.icon} text-info fs-4`}></i>
                       </div>
                       <div>
-                        <h1 className="text-success">{card.value}</h1>
-                        <h1 className="fs-5 mb-1">{card.title}</h1>
+                        <h1 className="text-danger fs-5">{card.value}</h1>
+                        <h1 className="fs-6 mb-1 text-light">{card.title}</h1>
                       </div>
                     </div>
                   </div>
